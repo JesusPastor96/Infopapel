@@ -1,0 +1,190 @@
+---
+// src/components/Hero.astro
+---
+
+<section id="hero" class="hero-block">
+  <div class="container-editorial hero-grid">
+    
+    <!-- Left Column: Editorial Statement -->
+    <div class="hero-copy">
+      
+
+      <h1 class="hero-title font-serif" data-hero-elem>
+        Papelería, informática<br/>
+        <span class="text-red">y equipamiento.</span>
+      </h1>
+
+      <p class="hero-lead text-muted" data-hero-elem>
+        Desde material escolar, oficina y papelería técnica hasta venta de ordenadores, consumibles de impresión y mobiliario de oficina. 
+        Más de dos décadas con una filosofía clara: <strong>mirar siempre por el cliente</strong>. El servicio ha sido y será nuestra piedra angular.
+      </p>
+
+      <div class="hero-actions" data-hero-elem>
+        <a href="#servicios" class="btn-solid-red" data-scroll-to="#servicios">
+          <span>Ver Qué Ofrecemos</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+        </a>
+        <a href="#historia" class="btn-outline-ink" data-scroll-to="#historia">
+          <span>Nuestra Historia</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Right Column: Vitruvian Architectural Emblem -->
+    <div class="hero-visual" data-hero-elem>
+      <div class="visual-plate">
+        <!-- Da Vinci Geometric Rings (hairline vector) -->
+        <svg class="plate-geometry" viewBox="0 0 460 460" fill="none">
+          <circle cx="230" cy="230" r="215" stroke="currentColor" stroke-width="1" stroke-dasharray="3 6" class="circle-slow-spin text-muted" style="opacity: 0.3;"/>
+          <circle cx="230" cy="230" r="185" stroke="currentColor" stroke-width="1" class="text-muted" style="opacity: 0.2;"/>
+          <rect x="65" y="65" width="330" height="330" stroke="currentColor" stroke-width="1" class="text-muted" style="opacity: 0.25;"/>
+        </svg>
+
+        <!-- Red Vitruvian Man Centerpiece -->
+        <div class="vitruvio-wrapper">
+          <img 
+            src={`${import.meta.env.BASE_URL}vitruvio-red.png`} 
+            alt="Hombre de Vitruvio en tinta roja de Infopapel" 
+            class="vitruvio-graphic"
+          />
+        </div>
+
+        <div class="plate-caption">
+          <span class="caption-title text-red">INFOPAPEL</span>
+          <span class="caption-sub text-muted">Servicio honesto · Atención de confianza</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .hero-block {
+    position: relative;
+    padding-top: 130px;
+    padding-bottom: 90px;
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 60px;
+    align-items: center;
+  }
+
+  .hero-copy {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-title {
+    font-size: clamp(3.2rem, 6.2vw, 5.6rem);
+    line-height: 1.04;
+    letter-spacing: -0.02em;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    font-weight: 400;
+  }
+
+  .hero-lead {
+    font-size: 1.15rem;
+    line-height: 1.65;
+    max-width: 540px;
+    margin-bottom: 36px;
+  }
+
+  .hero-lead strong {
+    color: var(--ink-primary);
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  /* Right Plate */
+  .hero-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .visual-plate {
+    position: relative;
+    width: min(420px, 85vw);
+    height: min(420px, 85vw);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-surface);
+    border-radius: 8px;
+    padding: 30px;
+  }
+
+  .plate-geometry {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+
+  .circle-slow-spin {
+    transform-origin: center;
+    animation: rotateSlow 60s linear infinite;
+  }
+
+  @keyframes rotateSlow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  .vitruvio-wrapper {
+    position: relative;
+    width: 76%;
+    height: 76%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+  }
+
+  .vitruvio-graphic {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.4s ease;
+  }
+
+  .visual-plate:hover .vitruvio-graphic {
+    transform: scale(1.03);
+  }
+
+  .plate-caption {
+    position: absolute;
+    bottom: 14px;
+    left: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.76rem;
+    letter-spacing: 0.04em;
+  }
+
+  .caption-title {
+    font-weight: 700;
+  }
+
+  @media (max-width: 900px) {
+    .hero-block {
+      padding-top: 80px;
+    }
+    .hero-grid {
+      grid-template-columns: 1fr;
+      gap: 50px;
+    }
+  }
+</style>

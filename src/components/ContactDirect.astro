@@ -1,0 +1,214 @@
+---
+// src/components/ContactDirect.astro
+---
+
+<section id="contacto" class="contact-block">
+  <div class="container-editorial">
+    
+    <div class="contact-header">
+      <div class="editorial-tag">
+        Atención Directa
+      </div>
+      <h2 class="contact-title font-serif">
+        ¿En qué podemos ayudarte hoy?
+      </h2>
+      <p class="contact-subtitle text-muted">
+        Sin formularios complejos ni esperas. Escríbenos directamente o visítanos en nuestra tienda física.
+      </p>
+    </div>
+
+    <div class="contact-split">
+      
+      <!-- WhatsApp Box -->
+      <div class="contact-col">
+        <span class="contact-col-tag text-red">WhatsApp Inmediato</span>
+        <h3 class="contact-col-title font-serif">Mensaje rápido con un clic</h3>
+        <p class="contact-col-p text-muted">
+          Elige el motivo de tu consulta para abrir una conversación directa:
+        </p>
+
+        <div class="wa-actions">
+          <a 
+            href="https://wa.me/?text=Hola%20Infopapel,%20quiero%20consultar%20por%20un%20equipo%20o%20servicio%20informático" 
+            target="_blank" 
+            class="wa-button"
+          >
+            <span class="wa-label">Consultar ordenadores o gestión informática</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+
+          <a 
+            href="https://wa.me/?text=Hola%20Infopapel,%20quería%20consultar%20por%20material%20escolar%20o%20de%20oficina" 
+            target="_blank" 
+            class="wa-button"
+          >
+            <span class="wa-label">Consultar material escolar o de oficina</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+
+          <a 
+            href="https://wa.me/?text=Hola%20Infopapel,%20quería%20consultar%20disponibilidad%20de%20un%20producto" 
+            target="_blank" 
+            class="wa-button"
+          >
+            <span class="wa-label">Consultar stock de papelería, tintas o mobiliario</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Physical Store Box -->
+      <div class="contact-col">
+        <span class="contact-col-tag">Atención Personal</span>
+        <h3 class="contact-col-title font-serif">Ubicación y Horarios</h3>
+        <p class="contact-col-p text-muted">
+          Te recibimos en persona detrás del mostrador:
+        </p>
+
+        <dl class="store-specs text-muted">
+          <div class="spec-entry">
+            <dt class="spec-term text-ink">Días de apertura</dt>
+            <dd class="spec-desc">De lunes a viernes</dd>
+          </div>
+          <div class="spec-entry">
+            <dt class="spec-term text-ink">Horario de mañanas</dt>
+            <dd class="spec-desc">09:30 a 13:30</dd>
+          </div>
+          <div class="spec-entry">
+            <dt class="spec-term text-ink">Horario de tardes</dt>
+            <dd class="spec-desc">17:00 a 20:00</dd>
+          </div>
+        </dl>
+
+        <a 
+          href="https://maps.google.com/?q=Infopapel" 
+          target="_blank" 
+          class="btn-outline-ink map-btn"
+        >
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"/><line x1="9" y1="3" x2="9" y2="18"/><line x1="15" y1="6" x2="15" y2="21"/></svg>
+          <span>Abrir ubicación en Google Maps</span>
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .contact-block {
+    position: relative;
+    padding: 120px 0;
+    background-color: var(--bg-ground);
+    transition: background-color 0.25s ease;
+  }
+
+  .contact-header {
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto 70px;
+  }
+
+  .contact-title {
+    font-size: clamp(2.4rem, 5vw, 4.2rem);
+    line-height: 1.05;
+    margin-top: 18px;
+    margin-bottom: 20px;
+    font-weight: 400;
+  }
+
+  .contact-subtitle {
+    font-size: 1.1rem;
+    line-height: 1.65;
+  }
+
+  .contact-split {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+
+  .contact-col {
+    background-color: var(--bg-surface);
+    border-radius: 6px;
+    padding: 44px 38px;
+    border: 1px solid var(--border-subtle);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: background-color 0.25s ease;
+  }
+
+  .contact-col-tag {
+    font-size: 0.76rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+
+  .contact-col-title {
+    font-size: 1.85rem;
+    line-height: 1.2;
+    margin-bottom: 12px;
+    font-weight: 400;
+  }
+
+  .contact-col-p {
+    font-size: 0.98rem;
+    margin-bottom: 28px;
+  }
+
+  .wa-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .wa-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 18px;
+    background-color: var(--bg-card);
+    border-radius: 4px;
+    color: var(--ink-primary);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: background-color 0.15s ease, color 0.15s ease;
+  }
+
+  .wa-button:hover {
+    background-color: var(--red-accent);
+    color: #ffffff;
+  }
+
+  .store-specs {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 30px;
+  }
+
+  .spec-entry {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    font-size: 0.9rem;
+  }
+
+  .spec-term {
+    font-weight: 500;
+  }
+
+  .map-btn {
+    width: 100%;
+  }
+
+  @media (max-width: 860px) {
+    .contact-split {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

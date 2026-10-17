@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* LIGHT THEME (DEFAULT) — Crisp Gallery & Architectural Paper */
+  --bg-ground: #fbfbfb;
+  --bg-surface: #f2f2f4;
+  --bg-surface-alt: #eaeaea;
+  --bg-card: #ffffff;
+  
+  --ink-primary: #111113;
+  --ink-secondary: #4b4b54;
+  --ink-tertiary: #7c7c88;
+  
+  /* Authentic Da Vinci Vermilion Red (Letterpress Ink, NO neon) */
+  --red-accent: #c82333;
+  --red-accent-hover: #b01c2a;
+  --red-subtle: #fdf2f2;
+  --red-border: #f8c9ce;
+  
+  --border-subtle: #e5e5ea;
+  --border-strong: #111113;
+
+  --font-serif: 'Instrument Serif', Georgia, serif;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+[data-theme="dark"] {
+  /* DARK THEME */
+  --bg-ground: #0d0d10;
+  --bg-surface: #141418;
+  --bg-surface-alt: #1c1c22;
+  --bg-card: #18181e;
+  
+  --ink-primary: #f4f4f7;
+  --ink-secondary: #a2a2b0;
+  --ink-tertiary: #6b6b7a;
+  
+  --red-accent: #dc2626;
+  --red-accent-hover: #ef4444;
+  --red-subtle: #241113;
+  --red-border: #521c21;
+  
+  --border-subtle: #24242c;
+  --border-strong: #f4f4f7;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: var(--bg-ground);
+  color: var(--ink-primary);
+  font-family: var(--font-sans);
+  scroll-behavior: auto;
+  overflow-x: hidden;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+body {
+  background-color: var(--bg-ground);
+  color: var(--ink-primary);
+  overflow-x: hidden;
+  min-height: 100svh;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Typography Utility Classes */
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+.text-ink {
+  color: var(--ink-primary);
+}
+
+.text-muted {
+  color: var(--ink-secondary);
+}
+
+.text-red {
+  color: var(--red-accent);
+}
+
+/* Editorial Minimalist Buttons */
+.btn-solid-red {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 28px;
+  background-color: var(--red-accent);
+  color: #ffffff;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-solid-red:hover {
+  background-color: var(--red-accent-hover);
+  transform: translateY(-1px);
+}
+
+.btn-solid-red:active {
+  transform: translateY(0);
+}
+
+.btn-outline-ink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 13px 26px;
+  background-color: transparent;
+  color: var(--ink-primary);
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 4px;
+  border: 1px solid var(--border-strong);
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-outline-ink:hover {
+  background-color: var(--ink-primary);
+  color: var(--bg-ground);
+  transform: translateY(-1px);
+}
+
+/* Subtle Editorial Tag */
+.editorial-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--red-accent);
+}
+
+.editorial-tag::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background-color: var(--red-accent);
+  border-radius: 50%;
+}
+
+/* Container */
+.container-editorial {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* Selection */
+::selection {
+  background-color: var(--red-accent);
+  color: #ffffff;
+}
+
+/* Custom Minimal Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background-color: var(--bg-ground);
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--border-subtle);
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--ink-tertiary);
+}

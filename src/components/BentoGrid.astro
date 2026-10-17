@@ -1,0 +1,175 @@
+---
+// src/components/BentoGrid.astro
+---
+
+<section id="servicios" class="services-block">
+  <div class="container-editorial">
+    
+    <div class="services-header">
+      <div class="editorial-tag">
+        Nuestra Oferta
+      </div>
+      <h2 class="services-title font-serif">
+        Papelería, informática y equipamiento.
+      </h2>
+      <p class="services-desc text-muted">
+        Damos servicio tanto a particulares y estudiantes como a empresas y oficinas. 
+        Todo lo que necesitas para tu día a día o tu puesto de trabajo, con asesoramiento honesto de principio a fin.
+      </p>
+    </div>
+
+    <div class="services-layout">
+      
+      <!-- Area 1: Papelería Escolar & Oficina -->
+      <div class="service-card" data-service-card>
+        <span class="service-category text-red">Papelería & Suministros</span>
+        <h3 class="service-name font-serif">Material escolar, oficina y papelería técnica</h3>
+        <p class="service-text text-muted">
+          Amplio catálogo en papelería de primeras marcas para el colegio, el instituto, la universidad o tu empresa. 
+          Cuadernos, carpetas, archivo, consumibles de oficina, artículos de escritura y material para bellas artes.
+        </p>
+        <div class="service-features">
+          <span class="feature-tag">Material escolar y juvenil</span>
+          <span class="feature-tag">Escritura y dibujo técnico</span>
+          <span class="feature-tag">Archivo y organización</span>
+          <span class="feature-tag">Suministros de oficina</span>
+        </div>
+      </div>
+
+      <!-- Area 2: Informática & Gestión de Equipos -->
+      <div class="service-card" data-service-card>
+        <span class="service-category text-red">Informática & Soluciones</span>
+        <h3 class="service-name font-serif">Equipos, accesorios y gestión técnica</h3>
+        <p class="service-text text-muted">
+          Venta de ordenadores de sobremesa, portátiles, monitores, teclados y accesorios. 
+          Si tu equipo necesita una puesta a punto o tiene una avería, gestionamos y coordinamos el servicio con informáticos profesionales de nuestra total confianza.
+        </p>
+        <div class="service-features">
+          <span class="feature-tag">Venta de PCs y portátiles</span>
+          <span class="feature-tag">Gestión con informáticos de confianza</span>
+          <span class="feature-tag">Periféricos y cables</span>
+          <span class="feature-tag">Asesoramiento honesto</span>
+        </div>
+      </div>
+
+      <!-- Area 3: Impresión & Consumibles -->
+      <div class="service-card" data-service-card>
+        <span class="service-category text-red">Sistemas de Impresión</span>
+        <h3 class="service-name font-serif">Impresoras, tintas y tóners</h3>
+        <p class="service-text text-muted">
+          Venta de impresoras multifunción para el hogar o la oficina. Cartuchos de tinta y tóners originales y compatibles 
+          garantizados, asesorándote siempre sobre la opción más rentable por copia.
+        </p>
+        <div class="service-features">
+          <span class="feature-tag">Impresoras domésticas y de empresa</span>
+          <span class="feature-tag">Tintas y tóners originales</span>
+          <span class="feature-tag">Consumibles compatibles</span>
+        </div>
+      </div>
+
+      <!-- Area 4: Mobiliario de Oficina -->
+      <div class="service-card" data-service-card>
+        <span class="service-category text-red">Mobiliario de Oficina</span>
+        <h3 class="service-name font-serif">Equipamiento para espacios de trabajo</h3>
+        <p class="service-text text-muted">
+          Sillería ergonómica, mesas de despacho, puestos operativos, cajoneras y soluciones de archivo. 
+          Equipamos tu oficina, negocio o zona de estudio en casa pensando en la comodidad y la durabilidad.
+        </p>
+        <div class="service-features">
+          <span class="feature-tag">Sillas de oficina ergonómicas</span>
+          <span class="feature-tag">Mesas de trabajo y estudio</span>
+          <span class="feature-tag">Archivadores y armarios</span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .services-block {
+    position: relative;
+    padding: 120px 0;
+    background-color: var(--bg-surface);
+    transition: background-color 0.25s ease;
+  }
+
+  .services-header {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 70px;
+  }
+
+  .services-title {
+    font-size: clamp(2.4rem, 5vw, 4.2rem);
+    line-height: 1.05;
+    margin-top: 18px;
+    margin-bottom: 20px;
+    font-weight: 400;
+  }
+
+  .services-desc {
+    font-size: 1.1rem;
+    line-height: 1.65;
+  }
+
+  .services-layout {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+
+  .service-card {
+    background-color: var(--bg-card);
+    border-radius: 6px;
+    padding: 44px 38px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: background-color 0.25s ease;
+  }
+
+  .service-category {
+    font-size: 0.76rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  .service-name {
+    font-size: 1.85rem;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    font-weight: 400;
+  }
+
+  .service-text {
+    font-size: 0.98rem;
+    line-height: 1.65;
+    margin-bottom: 28px;
+  }
+
+  .service-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .feature-tag {
+    padding: 6px 12px;
+    background-color: var(--bg-surface);
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--ink-secondary);
+  }
+
+  @media (max-width: 860px) {
+    .services-layout {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  }
+</style>

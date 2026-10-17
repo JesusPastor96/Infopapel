@@ -1,0 +1,513 @@
+---
+// src/components/LayerDeconstruct.astro
+---
+
+<section id="capas" class="layers-section">
+  <div class="container-editorial">
+    
+    <!-- Section Introduction: Subtly honoring resilience -->
+    <div class="layers-intro">
+      <div class="editorial-tag">
+        El Oficio Que Permanece
+      </div>
+      <h2 class="layers-title font-serif">
+        Un negocio no son cuatro paredes.
+      </h2>
+      <p class="layers-subtitle text-muted">
+        Después de más de dos décadas en el local de siempre, las circunstancias obligaron a cerrar una puerta, 
+        pero no a rendirse. Infopapel sigue latiendo con la misma fuerza de siempre: porque el compromiso, 
+        la palabra dada y la vocación de servicio van con la persona, no con las paredes.
+      </p>
+    </div>
+
+    <!-- Interactive Layer Stage: Split 3D Showcase -->
+    <div class="layers-layout">
+      
+      <!-- Left: 3D Layer Stack -->
+      <div class="folio-stage" id="layerStage">
+        <div class="folio-box" id="explodedBox">
+          
+          <!-- LAYER 1: Papelería & Material de Oficina -->
+          <div class="folio-plate plate-1 active" data-layer-id="1">
+            <div class="plate-inner">
+              <svg class="draft-grid-svg" width="100%" height="100%">
+                <defs>
+                  <pattern id="archGridPattern" width="28" height="28" patternUnits="userSpaceOnUse">
+                    <path d="M 28 0 L 0 0 0 28" fill="none" stroke="currentColor" stroke-width="0.6" opacity="0.18"/>
+                  </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#archGridPattern)" />
+              </svg>
+              <div class="plate-top-bar">
+                <span class="plate-dot"></span>
+                <span class="plate-title">Papelería, Escolar & Oficina</span>
+              </div>
+              <div class="plate-center-art">
+                <div class="art-sheet"></div>
+                <div class="art-sheet back"></div>
+              </div>
+              <div class="plate-footer text-muted">
+                Material escolar · Papelería técnica · Escritura y archivo
+              </div>
+            </div>
+          </div>
+
+          <!-- LAYER 2: Impresión & Mobiliario -->
+          <div class="folio-plate plate-2" data-layer-id="2">
+            <div class="plate-inner">
+              <svg class="da-vinci-vector" viewBox="0 0 380 380" fill="none">
+                <circle cx="190" cy="190" r="160" stroke="currentColor" stroke-width="1.2" stroke-dasharray="4 6" opacity="0.35"/>
+                <rect x="55" y="55" width="270" height="270" stroke="currentColor" stroke-width="1" opacity="0.25"/>
+              </svg>
+              <div class="plate-top-bar">
+                <span class="plate-dot"></span>
+                <span class="plate-title">Equipamiento, Mobiliario & Tintas</span>
+              </div>
+              <div class="plate-center-art">
+                <div class="art-chair-wireframe">
+                  <div class="chair-back"></div>
+                  <div class="chair-seat"></div>
+                </div>
+              </div>
+              <div class="plate-footer text-muted">
+                Sillería ergonómica · Impresoras · Consumibles
+              </div>
+            </div>
+          </div>
+
+          <!-- LAYER 3: Hombre de Vitruvio (El Corazón & La Resiliencia) -->
+          <div class="folio-plate plate-3" data-layer-id="3">
+            <div class="plate-inner plate-inner-red">
+              <div class="plate-top-bar">
+                <span class="plate-dot red"></span>
+                <span class="plate-title text-red">El Trato Humano · Seguir Adelante</span>
+              </div>
+              <div class="plate-center-art vitruvio-art">
+                <img src={`${import.meta.env.BASE_URL}vitruvio-red.png`} alt="Hombre de Vitruvio en Tinta Roja" class="plate-vitruvio-full" />
+              </div>
+              <div class="plate-footer text-red">
+                Mirar siempre por el cliente con honestidad
+              </div>
+            </div>
+          </div>
+
+          <!-- LAYER 4: Informática & Gestión de Equipos -->
+          <div class="folio-plate plate-4" data-layer-id="4">
+            <div class="plate-inner">
+              <div class="plate-top-bar">
+                <span class="plate-dot"></span>
+                <span class="plate-title">Informática & Gestión de Equipos</span>
+              </div>
+              <div class="plate-center-art">
+                <div class="pc-wireframe">
+                  <div class="screen-frame"></div>
+                  <div class="base-frame"></div>
+                </div>
+              </div>
+              <div class="plate-footer text-muted">
+                Venta de ordenadores · Periféricos · Técnicos de confianza
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Right: Interactive Narrative & Layer Selector -->
+      <div class="layers-narrative">
+        <div class="narrative-card">
+          <h3 class="card-headline font-serif">
+            Las paredes se mudan.<br/>
+            <span class="text-red">La vocación permanece.</span>
+          </h3>
+          <p class="card-prose text-muted">
+            Un negocio de verdad no es un local comercial; es la confianza que depositan en ti quienes te conocen de toda la vida. 
+            Aunque las circunstancias obligaran a cambiar de espacio, mi padre sigue al pie del cañón, 
+            atendiendo con la misma dedicación a cada cliente y demostrando que la dignidad del trabajo bien hecho no depende de una dirección.
+          </p>
+
+          <!-- Interactive Layer Switcher -->
+          <div class="layer-selector-list">
+            <button class="selector-btn active" data-select-layer="1" type="button">
+              <span class="selector-dot"></span>
+              <span class="btn-info">
+                <strong>Papelería Escolar & Oficina</strong>
+                <small class="text-muted">Material escolar, juvenil, oficina y archivo</small>
+              </span>
+            </button>
+
+            <button class="selector-btn" data-select-layer="2" type="button">
+              <span class="selector-dot"></span>
+              <span class="btn-info">
+                <strong>Equipamiento & Mobiliario</strong>
+                <small class="text-muted">Impresoras, tóners y sillería ergonómica</small>
+              </span>
+            </button>
+
+            <button class="selector-btn highlight" data-select-layer="3" type="button">
+              <span class="selector-dot red"></span>
+              <span class="btn-info">
+                <strong class="text-red">El Hombre de Vitruvio</strong>
+                <small class="text-muted">La persona en el centro · Resiliencia y honestidad</small>
+              </span>
+            </button>
+
+            <button class="selector-btn" data-select-layer="4" type="button">
+              <span class="selector-dot"></span>
+              <span class="btn-info">
+                <strong>Informática & Gestión de Equipos</strong>
+                <small class="text-muted">Venta de ordenadores, accesorios y técnicos de confianza</small>
+              </span>
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .layers-section {
+    position: relative;
+    padding: 120px 0 130px;
+    background-color: var(--bg-surface);
+    transition: background-color 0.25s ease;
+    overflow: hidden;
+  }
+
+  .layers-intro {
+    text-align: center;
+    max-width: 780px;
+    margin: 0 auto 70px;
+  }
+
+  .layers-title {
+    font-size: clamp(2.4rem, 5vw, 4.4rem);
+    line-height: 1.05;
+    margin-top: 18px;
+    margin-bottom: 20px;
+    font-weight: 400;
+  }
+
+  .layers-subtitle {
+    font-size: 1.1rem;
+    line-height: 1.7;
+  }
+
+  /* Two-column layout */
+  .layers-layout {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 60px;
+    align-items: center;
+  }
+
+  /* 3D Stage */
+  .folio-stage {
+    position: relative;
+    width: 100%;
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1400px;
+  }
+
+  .folio-box {
+    position: relative;
+    width: min(380px, 85vw);
+    height: min(440px, 95vw);
+    transform-style: preserve-3d;
+    transform: rotateY(-22deg) rotateX(14deg);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .folio-plate {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    will-change: transform, opacity;
+    border-radius: 8px;
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+  }
+
+  .plate-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08); /* taste-skill-ignore */
+  }
+
+  .plate-inner-red {
+    border-color: var(--red-border);
+    background-color: var(--red-subtle);
+  }
+
+  .draft-grid-svg {
+    position: absolute;
+    inset: 0;
+    color: var(--ink-secondary);
+    pointer-events: none;
+  }
+
+  .da-vinci-vector {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    color: var(--ink-primary);
+  }
+
+  .plate-top-bar {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+  }
+
+  .plate-dot {
+    width: 6px;
+    height: 6px;
+    background-color: var(--ink-tertiary);
+    border-radius: 50%;
+  }
+
+  .plate-dot.red {
+    background-color: var(--red-accent);
+  }
+
+  .plate-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--ink-primary);
+  }
+
+  .plate-center-art {
+    position: relative;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+  }
+
+  .plate-vitruvio-full {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+  }
+
+  .plate-footer {
+    position: relative;
+    z-index: 5;
+    font-size: 0.78rem;
+    letter-spacing: 0.03em;
+  }
+
+  /* Minimal wireframes inside layers */
+  .art-sheet {
+    width: 90px;
+    height: 110px;
+    border: 1.5px solid var(--ink-primary);
+    border-radius: 4px;
+    background-color: var(--bg-surface);
+  }
+  .art-sheet.back {
+    position: absolute;
+    transform: rotate(8deg) translate(8px, 6px);
+    z-index: -1;
+    opacity: 0.4;
+  }
+
+  .art-chair-wireframe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+  .chair-back {
+    width: 50px;
+    height: 60px;
+    border: 1.5px solid var(--ink-primary);
+    border-radius: 6px 6px 0 0;
+  }
+  .chair-seat {
+    width: 60px;
+    height: 12px;
+    border: 1.5px solid var(--ink-primary);
+    border-radius: 3px;
+  }
+
+  .pc-wireframe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+  .screen-frame {
+    width: 100px;
+    height: 65px;
+    border: 1.5px solid var(--ink-primary);
+    border-radius: 4px;
+  }
+  .base-frame {
+    width: 40px;
+    height: 6px;
+    border: 1.5px solid var(--ink-primary);
+    border-radius: 2px;
+  }
+
+  /* Right Narrative Card */
+  .narrative-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 44px 38px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04); /* taste-skill-ignore */
+  }
+
+  .card-kicker {
+    font-size: 0.88rem;
+    font-style: italic;
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  .card-headline {
+    font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+    line-height: 1.15;
+    margin-bottom: 18px;
+    font-weight: 400;
+  }
+
+  .card-prose {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 30px;
+  }
+
+  /* Layer Selector List */
+  .layer-selector-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .selector-btn {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 18px;
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: 6px;
+    cursor: pointer;
+    text-align: left;
+    transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+  }
+
+  .selector-btn:hover {
+    background-color: var(--bg-surface-alt);
+    transform: translateX(4px);
+  }
+
+  .selector-btn.active {
+    border-color: var(--border-strong);
+    background-color: var(--bg-card);
+  }
+
+  .selector-btn.highlight.active {
+    border-color: var(--red-accent);
+  }
+
+  .selector-dot {
+    width: 8px;
+    height: 8px;
+    background-color: var(--ink-tertiary);
+    border-radius: 50%;
+  }
+
+  .selector-dot.red {
+    background-color: var(--red-accent);
+  }
+
+  .btn-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .btn-info strong {
+    font-size: 0.92rem;
+    color: var(--ink-primary);
+  }
+
+  .btn-info small {
+    font-size: 0.78rem;
+  }
+
+  @media (max-width: 960px) {
+    .layers-layout {
+      grid-template-columns: 1fr;
+      gap: 50px;
+    }
+    .folio-stage {
+      min-height: 460px;
+    }
+  }
+</style>
+
+<script>
+  // Layer Selection Interactions
+  const buttons = document.querySelectorAll<HTMLButtonElement>('[data-select-layer]');
+  const plates = document.querySelectorAll<HTMLElement>('.folio-plate');
+  const folioBox = document.getElementById('explodedBox');
+
+  function focusLayer(layerNum: number) {
+    buttons.forEach(btn => {
+      if (btn.getAttribute('data-select-layer') === String(layerNum)) {
+        btn.classList.add('active');
+      } else {
+        btn.classList.remove('active');
+      }
+    });
+
+    plates.forEach(plate => {
+      const id = Number(plate.getAttribute('data-layer-id'));
+      if (id === layerNum) {
+        plate.style.transform = `translateZ(${120}px) translateY(-10px) scale(1.04)`;
+        plate.style.zIndex = '30';
+      } else if (id < layerNum) {
+        plate.style.transform = `translateZ(${(id - layerNum) * 70}px) translateY(${(layerNum - id) * 15}px)`;
+        plate.style.zIndex = `${10 + id}`;
+      } else {
+        plate.style.transform = `translateZ(${(id - layerNum) * 50}px) translateY(${(layerNum - id) * 15}px)`;
+        plate.style.zIndex = `${10 + id}`;
+      }
+    });
+  }
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const layerNum = Number(btn.getAttribute('data-select-layer'));
+      focusLayer(layerNum);
+    });
+  });
+
+  // Default initial depth layout
+  focusLayer(3); // Centerpiece on Vitruvio by default
+</script>

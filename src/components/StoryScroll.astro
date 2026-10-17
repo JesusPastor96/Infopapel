@@ -1,0 +1,304 @@
+---
+// src/components/StoryScroll.astro
+---
+
+<section id="historia" class="story-section">
+  <div class="container-editorial">
+    
+    <!-- Realistic Editorial Section Header -->
+    <header class="story-header">
+      <div class="editorial-tag">Cómo trabajamos</div>
+      <h2 class="story-main-title font-serif">
+        La realidad de un negocio local: dar la cara y no engañar a nadie.
+      </h2>
+      <p class="story-main-subtitle text-muted">
+        Estuve tres años trabajando con mi padre en Infopapel. Si un negocio se mantiene durante más de veinte años 
+        no es por suerte ni por discursos: es porque no le vendes a la gente lo que no necesita y porque respondes 
+        siempre que surge un problema.
+      </p>
+    </header>
+
+    <!-- Asymmetrical Editorial Spread -->
+    <div class="story-spread">
+      
+      <!-- Left Column: The Practical Rule (Nuestra Forma de Trabajar) -->
+      <div class="story-pillar-card">
+        <div class="pillar-top">
+          <span class="pillar-label text-red">Nuestra norma</span>
+          <span class="pillar-badge">Sin letra pequeña</span>
+        </div>
+
+        <blockquote class="pillar-quote font-serif">
+          "Mirar por el cliente. Si un arreglo o una compra no te conviene, te lo decimos."
+        </blockquote>
+
+        <div class="pillar-body">
+          <p>
+            La forma de trabajar de mi padre siempre ha sido muy directa: si vienes con un ordenador averiado 
+            y la reparación te va a costar más que comprar uno nuevo, te decimos la verdad. Si para tu oficina 
+            o tu casa te sobra con una opción más barata o consumibles estándar, no intentamos meterte lo más caro.
+          </p>
+          <p>
+            No tenemos un taller donde reparemos placas base o componentes nosotros mismos: cuando hay un tema técnico complejo, 
+            lo gestionamos mano a mano con informáticos profesionales de nuestra máxima confianza. Pero quien da la cara, 
+            quien te atiende en el mostrador y quien responde ante ti somos nosotros. 
+            La gente vuelve cuando sabe que no le vas a tomar el pelo.
+          </p>
+        </div>
+
+        
+      </div>
+
+      <!-- Right Column: Chronicle (El Mostrador + El Día a Día Hoy) -->
+      <div class="story-chronicle">
+        
+        <!-- Part 1: Tres años en el mostrador -->
+        <article class="chronicle-item">
+          <h3 class="chronicle-title font-serif">
+            Tres años detrás del mostrador.
+          </h3>
+          <div class="chronicle-content text-muted">
+            <p>
+              Pasé tres años trabajando mano a mano con mi padre en la tienda. Despachando material escolar para los chavales, 
+              preparando pedidos de papelería para oficinas, cargando cajas de papel, montando mesas y sillas, 
+              y entregando ordenadores listos para encender y trabajar.
+            </p>
+            <p>
+              En el día a día ves la realidad: desde quien entra con prisas a por un cartucho de tinta hasta empresas 
+              que necesitan equipar diez puestos de trabajo completos. A todo el mundo se le atiende con seriedad, 
+              rapidez y escuchando lo que de verdad le hace falta.
+            </p>
+          </div>
+        </article>
+
+        <!-- Part 2: La realidad de hoy -->
+        <article class="chronicle-item chronicle-item-active">
+          <h3 class="chronicle-title font-serif">
+            Seguimos trabajando y atendiendo cada día.
+          </h3>
+          <div class="chronicle-content text-muted">
+            <p>
+              Después de más de veinte años tuvimos que dejar el local donde estuvimos siempre. No fue una situación agradable, 
+              pero aquí no se baja los brazos: seguimos con la actividad en marcha, tramitando pedidos de papelería, 
+              suministrando material a oficinas y gestionando informática.
+            </p>
+            <p>
+              Hoy compras cualquier cosa en una web en diez segundos, pero cuando no sabes qué tóner lleva tu impresora, 
+              cuando un ordenador da problemas o cuando necesitas que alguien te solucione una urgencia en el día, 
+              tener a un profesional conocido al otro lado del teléfono o por WhatsApp es lo que te saca del apuro.
+            </p>
+          </div>
+          
+        </article>
+
+      </div>
+
+    </div>
+
+    <!-- Bottom Editorial Statement Banner -->
+    <div class="story-manifesto">
+      <div class="manifesto-inner">
+        <p class="manifesto-text font-serif">
+          "Las paredes de un negocio pueden cambiar, pero las ganas de trabajar bien y la responsabilidad con cada cliente no cambian."
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .story-section {
+    position: relative;
+    padding: 130px 0 100px;
+    background-color: var(--bg-ground);
+    transition: background-color 0.25s ease;
+  }
+
+  .story-header {
+    max-width: 840px;
+    margin-bottom: 70px;
+  }
+
+  .story-main-title {
+    font-size: clamp(2.4rem, 4.6vw, 3.8rem);
+    line-height: 1.08;
+    margin-top: 18px;
+    margin-bottom: 22px;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+
+  .story-main-subtitle {
+    font-size: 1.12rem;
+    line-height: 1.65;
+    max-width: 740px;
+  }
+
+  /* Asymmetrical Editorial Spread */
+  .story-spread {
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    gap: 40px;
+    align-items: stretch;
+    margin-bottom: 60px;
+  }
+
+  /* Left Column: Pillar Card */
+  .story-pillar-card {
+    background-color: var(--bg-surface);
+    border-radius: 8px;
+    padding: 56px 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    transition: background-color 0.25s ease;
+  }
+
+  .pillar-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 32px;
+  }
+
+  .pillar-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .pillar-badge {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--ink-tertiary);
+    background-color: var(--bg-ground);
+    padding: 4px 10px;
+    border-radius: 4px;
+  }
+
+  .pillar-quote {
+    font-size: clamp(1.75rem, 2.7vw, 2.35rem);
+    line-height: 1.2;
+    color: var(--ink-primary);
+    margin-bottom: 32px;
+    font-style: italic;
+    font-weight: 400;
+  }
+
+  .pillar-body {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    font-size: 1.02rem;
+    line-height: 1.7;
+    color: var(--ink-secondary);
+    margin-bottom: 40px;
+  }
+
+  .pillar-body strong {
+    color: var(--ink-primary);
+    font-weight: 600;
+  }
+
+  .pillar-footer {
+    padding-top: 28px;
+    margin-top: auto;
+  }
+
+  .pillar-sign {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .sign-role {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .sign-name {
+    font-size: 1.2rem;
+    color: var(--ink-primary);
+  }
+
+  /* Right Column: Chronicle Items */
+  .story-chronicle {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .chronicle-item {
+    background-color: var(--bg-surface);
+    border-radius: 8px;
+    padding: 44px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    transition: background-color 0.25s ease;
+  }
+
+  .chronicle-item-active {
+    background-color: var(--red-subtle);
+  }
+
+  .chronicle-title {
+    font-size: clamp(1.5rem, 2.3vw, 1.95rem);
+    line-height: 1.15;
+    margin-bottom: 18px;
+    font-weight: 400;
+  }
+
+  .chronicle-content {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    font-size: 0.98rem;
+    line-height: 1.65;
+  }
+
+  .chronicle-tagline {
+    margin-top: 22px;
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--red-accent);
+  }
+
+  /* Bottom Manifesto Banner */
+  .story-manifesto {
+    background-color: var(--bg-surface);
+    border-radius: 8px;
+    padding: 40px 48px;
+    text-align: center;
+  }
+
+  .manifesto-inner {
+    max-width: 860px;
+    margin: 0 auto;
+  }
+
+  .manifesto-text {
+    font-size: clamp(1.25rem, 2.2vw, 1.65rem);
+    line-height: 1.35;
+    color: var(--ink-primary);
+    font-style: italic;
+  }
+
+  @media (max-width: 960px) {
+    .story-spread {
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+
+    .story-pillar-card,
+    .chronicle-item,
+    .story-manifesto {
+      padding: 36px 26px;
+    }
+  }
+</style>
