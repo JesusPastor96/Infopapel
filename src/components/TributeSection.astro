@@ -44,9 +44,10 @@
     max-width: 820px;
     margin: 0 auto;
     background-color: var(--bg-card);
+    border: 1px solid var(--border-subtle);
     border-radius: 8px;
     padding: 64px 50px;
-    transition: background-color 0.25s ease;
+    transition: background-color 0.25s ease, border-color 0.25s ease;
   }
 
   .tribute-quote {
@@ -91,8 +92,20 @@
   }
 
   @media (max-width: 768px) {
+    .tribute-block {
+      padding: 80px 0 60px;
+    }
     .tribute-paper {
-      padding: 40px 24px;
+      padding: 36px 24px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .tribute-block {
+      padding: 60px 0 40px;
+    }
+    .tribute-paper {
+      padding: 26px 18px;
     }
   }
 </style>

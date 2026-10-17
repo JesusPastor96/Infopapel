@@ -171,31 +171,36 @@
     justify-content: space-between;
     padding: 14px 18px;
     background-color: var(--bg-card);
+    border: 1px solid var(--border-subtle);
     border-radius: 4px;
     color: var(--ink-primary);
     text-decoration: none;
     font-size: 0.9rem;
     font-weight: 500;
-    transition: background-color 0.15s ease, color 0.15s ease;
+    transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
   }
 
   .wa-button:hover {
     background-color: var(--red-accent);
+    border-color: var(--red-accent);
     color: #ffffff;
   }
 
   .store-specs {
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    gap: 8px;
     margin-bottom: 30px;
   }
 
   .spec-entry {
     display: flex;
     justify-content: space-between;
-    padding: 8px 0;
+    align-items: center;
+    padding: 10px 14px;
     font-size: 0.9rem;
+    background-color: var(--bg-card);
+    border-radius: 4px;
   }
 
   .spec-term {
@@ -207,8 +212,27 @@
   }
 
   @media (max-width: 860px) {
+    .contact-block {
+      padding: 90px 0 60px;
+    }
+    .contact-header {
+      margin-bottom: 40px;
+    }
     .contact-split {
       grid-template-columns: 1fr;
+      gap: 24px;
+    }
+    .contact-col {
+      padding: 32px 24px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .contact-block {
+      padding: 70px 0 50px;
+    }
+    .contact-col {
+      padding: 24px 18px;
     }
   }
 </style>

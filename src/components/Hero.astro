@@ -120,8 +120,10 @@
     align-items: center;
     justify-content: center;
     background-color: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
     border-radius: 8px;
     padding: 30px;
+    transition: background-color 0.25s ease, border-color 0.25s ease;
   }
 
   .plate-geometry {
@@ -134,7 +136,7 @@
 
   .circle-slow-spin {
     transform-origin: center;
-    animation: rotateSlow 60s linear infinite;
+    animation: rotateSlow 40s linear infinite;
   }
 
   @keyframes rotateSlow {
@@ -180,11 +182,32 @@
 
   @media (max-width: 900px) {
     .hero-block {
-      padding-top: 80px;
+      padding-top: 100px;
+      padding-bottom: 60px;
     }
     .hero-grid {
       grid-template-columns: 1fr;
-      gap: 50px;
+      gap: 40px;
+    }
+    .hero-copy {
+      text-align: left;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero-actions {
+      flex-direction: column;
+      width: 100%;
+      gap: 12px;
+    }
+    .hero-actions .btn-solid-red,
+    .hero-actions .btn-outline-ink {
+      width: 100%;
+      justify-content: center;
+    }
+    .visual-plate {
+      width: min(320px, 90vw);
+      height: min(320px, 90vw);
     }
   }
 </style>

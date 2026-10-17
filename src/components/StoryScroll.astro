@@ -147,13 +147,14 @@
   /* Left Column: Pillar Card */
   .story-pillar-card {
     background-color: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
     border-radius: 8px;
     padding: 56px 48px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     position: relative;
-    transition: background-color 0.25s ease;
+    transition: background-color 0.25s ease, border-color 0.25s ease;
   }
 
   .pillar-top {
@@ -175,6 +176,7 @@
     font-weight: 500;
     color: var(--ink-tertiary);
     background-color: var(--bg-ground);
+    border: 1px solid var(--border-subtle);
     padding: 4px 10px;
     border-radius: 4px;
   }
@@ -234,17 +236,19 @@
 
   .chronicle-item {
     background-color: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
     border-radius: 8px;
     padding: 44px 40px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     flex: 1;
-    transition: background-color 0.25s ease;
+    transition: background-color 0.25s ease, border-color 0.25s ease;
   }
 
   .chronicle-item-active {
     background-color: var(--red-subtle);
+    border-color: var(--red-border);
   }
 
   .chronicle-title {
@@ -272,6 +276,7 @@
   /* Bottom Manifesto Banner */
   .story-manifesto {
     background-color: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
     border-radius: 8px;
     padding: 40px 48px;
     text-align: center;
@@ -290,15 +295,35 @@
   }
 
   @media (max-width: 960px) {
+    .story-section {
+      padding: 90px 0 60px;
+    }
+
+    .story-header {
+      margin-bottom: 40px;
+    }
+
     .story-spread {
       grid-template-columns: 1fr;
-      gap: 28px;
+      gap: 24px;
     }
 
     .story-pillar-card,
     .chronicle-item,
     .story-manifesto {
-      padding: 36px 26px;
+      padding: 32px 22px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .story-section {
+      padding: 70px 0 50px;
+    }
+
+    .story-pillar-card,
+    .chronicle-item,
+    .story-manifesto {
+      padding: 24px 18px;
     }
   }
 </style>

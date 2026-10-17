@@ -1,23 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
-  /* LIGHT THEME (DEFAULT) — Crisp Gallery & Architectural Paper */
-  --bg-ground: #fbfbfb;
-  --bg-surface: #f2f2f4;
-  --bg-surface-alt: #eaeaea;
+  /* LIGHT THEME (DEFAULT) — Crisp Gallery & Architectural Paper with defined borders */
+  --bg-ground: #fbfbfd;
+  --bg-surface: #f1f2f6;
+  --bg-surface-alt: #e5e7ef;
   --bg-card: #ffffff;
   
   --ink-primary: #111113;
-  --ink-secondary: #4b4b54;
-  --ink-tertiary: #7c7c88;
+  --ink-secondary: #484852;
+  --ink-tertiary: #727280;
   
-  /* Authentic Da Vinci Vermilion Red (Letterpress Ink, NO neon) */
+  /* Authentic Da Vinci Vermilion Red (Letterpress Ink) */
   --red-accent: #c82333;
   --red-accent-hover: #b01c2a;
   --red-subtle: #fdf2f2;
-  --red-border: #f8c9ce;
+  --red-border: #f0a6ae;
   
-  --border-subtle: #e5e5ea;
+  /* Clearly defined, crisp architectural borders */
+  --border-subtle: #d0d2dc;
   --border-strong: #111113;
 
   --font-serif: 'Instrument Serif', Georgia, serif;
@@ -38,9 +39,9 @@
   --red-accent: #dc2626;
   --red-accent-hover: #ef4444;
   --red-subtle: #241113;
-  --red-border: #521c21;
+  --red-border: #5a2026;
   
-  --border-subtle: #24242c;
+  --border-subtle: #2a2a35;
   --border-strong: #f4f4f7;
 }
 
