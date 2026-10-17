@@ -5,11 +5,9 @@
 <section id="capas" class="layers-section">
   <div class="container-editorial">
     
-    <!-- Section Introduction: Subtly honoring resilience -->
-    <div class="layers-intro">
-      <div class="editorial-tag">
-        El Oficio Que Permanece
-      </div>
+    <!-- Section Introduction -->
+    <header class="layers-intro">
+      <div class="editorial-tag">El Oficio Que Permanece</div>
       <h2 class="layers-title font-serif">
         Un negocio no son cuatro paredes.
       </h2>
@@ -18,99 +16,190 @@
         pero no a rendirse. Infopapel sigue latiendo con la misma fuerza de siempre: porque el compromiso, 
         la palabra dada y la vocación de servicio van con la persona, no con las paredes.
       </p>
-    </div>
+    </header>
 
-    <!-- Interactive Layer Stage: Split 3D Showcase -->
+    <!-- Interactive Layer Stage -->
     <div class="layers-layout">
       
-      <!-- Left: 3D Layer Stack -->
+      <!-- Stage: Interactive Architectural Deck (Responsive Mobile Swipe Deck & Desktop 3D Exploded View) -->
       <div class="folio-stage" id="layerStage">
+        
+        <!-- Mobile Navigation Controls (Touch Arrows + Counter) -->
+        <div class="mobile-deck-header" aria-hidden="true">
+          <span class="mobile-deck-counter" id="deckCounter">Capa 3 de 4</span>
+          <span class="mobile-deck-hint text-muted">Desliza con el dedo o usa las flechas</span>
+        </div>
+
         <div class="folio-box" id="explodedBox">
           
-          <!-- LAYER 1: Papelería & Material de Oficina -->
-          <div class="folio-plate plate-1 active" data-layer-id="1">
+          <!-- PLATE 1: Papelería & Material Técnico -->
+          <article class="folio-plate plate-1" data-layer-id="1" tabindex="0" role="region" aria-label="Capa 1: Papelería Escolar y Técnica">
             <div class="plate-inner">
-              <svg class="draft-grid-svg" width="100%" height="100%">
+              <svg class="draft-grid-svg" width="100%" height="100%" aria-hidden="true">
                 <defs>
-                  <pattern id="archGridPattern" width="28" height="28" patternUnits="userSpaceOnUse">
-                    <path d="M 28 0 L 0 0 0 28" fill="none" stroke="currentColor" stroke-width="0.6" opacity="0.18"/>
+                  <pattern id="archGridPattern" width="24" height="24" patternUnits="userSpaceOnUse">
+                    <path d="M 24 0 L 0 0 0 24" fill="none" stroke="currentColor" stroke-width="0.6" opacity="0.2"/>
                   </pattern>
                 </defs>
                 <rect width="100%" height="100%" fill="url(#archGridPattern)" />
               </svg>
+
               <div class="plate-top-bar">
-                <span class="plate-dot"></span>
-                <span class="plate-title">Papelería, Escolar & Oficina</span>
+                <span class="plate-indicator"></span>
+                <span class="plate-title">Papelería, Escolar & Técnica</span>
               </div>
+
               <div class="plate-center-art">
-                <div class="art-sheet"></div>
-                <div class="art-sheet back"></div>
+                <!-- Precision Architectural Drafting Drawing Vector -->
+                <svg class="blueprint-vector" viewBox="0 0 240 180" fill="none" aria-hidden="true">
+                  <rect x="25" y="25" width="190" height="130" rx="4" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 4" opacity="0.4"/>
+                  <rect x="35" y="35" width="170" height="110" rx="2" fill="var(--bg-surface)" stroke="currentColor" stroke-width="1"/>
+                  <!-- Technical Ruler -->
+                  <line x1="35" y1="125" x2="205" y2="125" stroke="currentColor" stroke-width="1.5"/>
+                  <line x1="50" y1="125" x2="50" y2="115" stroke="currentColor" stroke-width="1"/>
+                  <line x1="65" y1="125" x2="65" y2="120" stroke="currentColor" stroke-width="1"/>
+                  <line x1="80" y1="125" x2="80" y2="115" stroke="currentColor" stroke-width="1"/>
+                  <line x1="95" y1="125" x2="95" y2="120" stroke="currentColor" stroke-width="1"/>
+                  <line x1="110" y1="125" x2="110" y2="115" stroke="currentColor" stroke-width="1"/>
+                  <line x1="125" y1="125" x2="125" y2="120" stroke="currentColor" stroke-width="1"/>
+                  <line x1="140" y1="125" x2="140" y2="115" stroke="currentColor" stroke-width="1"/>
+                  <line x1="155" y1="125" x2="155" y2="120" stroke="currentColor" stroke-width="1"/>
+                  <line x1="170" y1="125" x2="170" y2="115" stroke="currentColor" stroke-width="1"/>
+                  <!-- Compass lines -->
+                  <circle cx="120" cy="75" r="30" stroke="currentColor" stroke-width="1" stroke-dasharray="3 3" opacity="0.6"/>
+                  <circle cx="120" cy="75" r="3" fill="var(--red-accent)"/>
+                  <path d="M120 75 L145 100" stroke="var(--red-accent)" stroke-width="1.5"/>
+                </svg>
               </div>
+
               <div class="plate-footer text-muted">
                 Material escolar · Papelería técnica · Escritura y archivo
               </div>
             </div>
-          </div>
+          </article>
 
-          <!-- LAYER 2: Impresión & Mobiliario -->
-          <div class="folio-plate plate-2" data-layer-id="2">
+          <!-- PLATE 2: Equipamiento & Mobiliario -->
+          <article class="folio-plate plate-2" data-layer-id="2" tabindex="0" role="region" aria-label="Capa 2: Equipamiento y Mobiliario">
             <div class="plate-inner">
-              <svg class="da-vinci-vector" viewBox="0 0 380 380" fill="none">
-                <circle cx="190" cy="190" r="160" stroke="currentColor" stroke-width="1.2" stroke-dasharray="4 6" opacity="0.35"/>
-                <rect x="55" y="55" width="270" height="270" stroke="currentColor" stroke-width="1" opacity="0.25"/>
+              <svg class="da-vinci-vector" viewBox="0 0 380 380" fill="none" aria-hidden="true">
+                <circle cx="190" cy="190" r="150" stroke="currentColor" stroke-width="1" stroke-dasharray="4 6" opacity="0.3"/>
+                <line x1="40" y1="190" x2="340" y2="190" stroke="currentColor" stroke-width="0.8" opacity="0.25"/>
+                <line x1="190" y1="40" x2="190" y2="340" stroke="currentColor" stroke-width="0.8" opacity="0.25"/>
               </svg>
+
               <div class="plate-top-bar">
-                <span class="plate-dot"></span>
+                <span class="plate-indicator"></span>
                 <span class="plate-title">Equipamiento, Mobiliario & Tintas</span>
               </div>
+
               <div class="plate-center-art">
-                <div class="art-chair-wireframe">
-                  <div class="chair-back"></div>
-                  <div class="chair-seat"></div>
-                </div>
+                <!-- Precision Isometric Workstation Vector -->
+                <svg class="blueprint-vector" viewBox="0 0 240 180" fill="none" aria-hidden="true">
+                  <!-- Ergonomic Chair Sketch -->
+                  <path d="M85 70 C85 55 105 55 105 70 L105 95 L85 95 Z" stroke="currentColor" stroke-width="1.5" fill="var(--bg-surface)"/>
+                  <rect x="75" y="95" width="40" height="8" rx="2" stroke="currentColor" stroke-width="1.5" fill="var(--bg-surface)"/>
+                  <line x1="95" y1="103" x2="95" y2="125" stroke="currentColor" stroke-width="2"/>
+                  <line x1="80" y1="125" x2="110" y2="125" stroke="currentColor" stroke-width="2"/>
+                  <!-- Printer / Equipment Vector -->
+                  <rect x="140" y="85" width="55" height="30" rx="3" stroke="currentColor" stroke-width="1.5" fill="var(--bg-surface)"/>
+                  <line x1="148" y1="95" x2="187" y2="95" stroke="currentColor" stroke-width="1"/>
+                  <rect x="150" y="115" width="35" height="15" rx="1" stroke="currentColor" stroke-width="1" stroke-dasharray="2 2"/>
+                  <!-- Ink Drop -->
+                  <path d="M167 60 C167 60 160 70 160 74 C160 78 163 81 167 81 C171 81 174 78 174 74 C174 70 167 60 167 60 Z" fill="var(--red-accent)"/>
+                </svg>
               </div>
+
               <div class="plate-footer text-muted">
-                Sillería ergonómica · Impresoras · Consumibles
+                Sillería ergonómica · Impresoras · Tintas y tóners
               </div>
             </div>
-          </div>
+          </article>
 
-          <!-- LAYER 3: Hombre de Vitruvio (El Corazón & La Resiliencia) -->
-          <div class="folio-plate plate-3" data-layer-id="3">
+          <!-- PLATE 3: El Hombre de Vitruvio (El Corazón & La Resiliencia) -->
+          <article class="folio-plate plate-3 active" data-layer-id="3" tabindex="0" role="region" aria-label="Capa 3: El Hombre de Vitruvio">
             <div class="plate-inner plate-inner-red">
               <div class="plate-top-bar">
-                <span class="plate-dot red"></span>
+                <span class="plate-indicator red"></span>
                 <span class="plate-title text-red">El Trato Humano · Seguir Adelante</span>
               </div>
+
               <div class="plate-center-art vitruvio-art">
-                <img src={`${import.meta.env.BASE_URL}vitruvio-red.png`} alt="Hombre de Vitruvio en Tinta Roja" class="plate-vitruvio-full" />
+                <!-- Rotating Celestial Ring Background -->
+                <svg class="vitruvio-rotating-rings" viewBox="0 0 300 300" fill="none" aria-hidden="true">
+                  <circle cx="150" cy="150" r="140" stroke="var(--red-accent)" stroke-width="1" stroke-dasharray="3 6" opacity="0.35"/>
+                  <circle cx="150" cy="150" r="110" stroke="var(--red-accent)" stroke-width="0.8" opacity="0.2"/>
+                  <rect x="45" y="45" width="210" height="210" stroke="var(--red-accent)" stroke-width="0.8" opacity="0.25"/>
+                </svg>
+                <img 
+                  src={`${import.meta.env.BASE_URL}vitruvio-red.png`} 
+                  alt="Hombre de Vitruvio en Tinta Roja" 
+                  class="plate-vitruvio-full" 
+                />
               </div>
+
               <div class="plate-footer text-red">
                 Mirar siempre por el cliente con honestidad
               </div>
             </div>
-          </div>
+          </article>
 
-          <!-- LAYER 4: Informática & Gestión de Equipos -->
-          <div class="folio-plate plate-4" data-layer-id="4">
+          <!-- PLATE 4: Informática & Gestión de Equipos -->
+          <article class="folio-plate plate-4" data-layer-id="4" tabindex="0" role="region" aria-label="Capa 4: Informática y Soluciones">
             <div class="plate-inner">
               <div class="plate-top-bar">
-                <span class="plate-dot"></span>
+                <span class="plate-indicator"></span>
                 <span class="plate-title">Informática & Gestión de Equipos</span>
               </div>
+
               <div class="plate-center-art">
-                <div class="pc-wireframe">
-                  <div class="screen-frame"></div>
-                  <div class="base-frame"></div>
-                </div>
+                <!-- Precision Workstation Monitor & Circuit Vector -->
+                <svg class="blueprint-vector" viewBox="0 0 240 180" fill="none" aria-hidden="true">
+                  <!-- Monitor -->
+                  <rect x="50" y="35" width="140" height="85" rx="4" stroke="currentColor" stroke-width="1.5" fill="var(--bg-surface)"/>
+                  <line x1="120" y1="120" x2="120" y2="135" stroke="currentColor" stroke-width="2"/>
+                  <line x1="95" y1="135" x2="145" y2="135" stroke="currentColor" stroke-width="2"/>
+                  <!-- Screen Details -->
+                  <rect x="62" y="47" width="116" height="61" rx="2" stroke="currentColor" stroke-width="0.8" stroke-dasharray="3 3" opacity="0.4"/>
+                  <!-- Keyboard & Mouse -->
+                  <rect x="65" y="145" width="90" height="12" rx="2" stroke="currentColor" stroke-width="1"/>
+                  <rect x="165" y="145" width="12" height="16" rx="3" stroke="currentColor" stroke-width="1"/>
+                  <!-- Tech Nodes -->
+                  <circle cx="90" cy="77" r="3" fill="var(--red-accent)"/>
+                  <line x1="93" y1="77" x2="140" y2="77" stroke="var(--red-accent)" stroke-width="1"/>
+                  <circle cx="140" cy="77" r="3" fill="var(--red-accent)"/>
+                </svg>
               </div>
+
               <div class="plate-footer text-muted">
                 Venta de ordenadores · Periféricos · Técnicos de confianza
               </div>
             </div>
-          </div>
+          </article>
 
         </div>
+
+        <!-- Mobile Touch Deck Navigation Arrows & Indicator Pills -->
+        <div class="mobile-deck-controls" aria-label="Controles de navegación de capas">
+          <button id="prevLayerBtn" class="deck-arrow-btn" type="button" aria-label="Capa anterior">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M15 18l-6-6 6-6"/>
+            </svg>
+          </button>
+
+          <div class="deck-pills-list">
+            <button class="deck-pill" data-deck-pill="1" type="button" aria-label="Ver capa 1: Papelería">1</button>
+            <button class="deck-pill" data-deck-pill="2" type="button" aria-label="Ver capa 2: Equipamiento">2</button>
+            <button class="deck-pill active" data-deck-pill="3" type="button" aria-label="Ver capa 3: Vitruvio">3</button>
+            <button class="deck-pill" data-deck-pill="4" type="button" aria-label="Ver capa 4: Informática">4</button>
+          </div>
+
+          <button id="nextLayerBtn" class="deck-arrow-btn" type="button" aria-label="Siguiente capa">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 18l6-6-6-6"/>
+            </svg>
+          </button>
+        </div>
+
       </div>
 
       <!-- Right: Interactive Narrative & Layer Selector -->
@@ -127,16 +216,16 @@
           </p>
 
           <!-- Interactive Layer Switcher -->
-          <div class="layer-selector-list">
-            <button class="selector-btn active" data-select-layer="1" type="button">
+          <div class="layer-selector-list" role="tablist" aria-label="Selector de capas del negocio">
+            <button class="selector-btn" data-select-layer="1" role="tab" aria-selected="false" type="button">
               <span class="selector-dot"></span>
               <span class="btn-info">
-                <strong>Papelería Escolar & Oficina</strong>
+                <strong>Papelería Escolar & Técnica</strong>
                 <small class="text-muted">Material escolar, juvenil, oficina y archivo</small>
               </span>
             </button>
 
-            <button class="selector-btn" data-select-layer="2" type="button">
+            <button class="selector-btn" data-select-layer="2" role="tab" aria-selected="false" type="button">
               <span class="selector-dot"></span>
               <span class="btn-info">
                 <strong>Equipamiento & Mobiliario</strong>
@@ -144,7 +233,7 @@
               </span>
             </button>
 
-            <button class="selector-btn highlight" data-select-layer="3" type="button">
+            <button class="selector-btn highlight active" data-select-layer="3" role="tab" aria-selected="true" type="button">
               <span class="selector-dot red"></span>
               <span class="btn-info">
                 <strong class="text-red">El Hombre de Vitruvio</strong>
@@ -152,7 +241,7 @@
               </span>
             </button>
 
-            <button class="selector-btn" data-select-layer="4" type="button">
+            <button class="selector-btn" data-select-layer="4" role="tab" aria-selected="false" type="button">
               <span class="selector-dot"></span>
               <span class="btn-info">
                 <strong>Informática & Gestión de Equipos</strong>
@@ -209,19 +298,43 @@
   .folio-stage {
     position: relative;
     width: 100%;
-    min-height: 520px;
+    min-height: 540px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     perspective: 1400px;
+    user-select: none;
+  }
+
+  .mobile-deck-header {
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 380px;
+    margin-bottom: 16px;
+    padding: 0 4px;
+  }
+
+  .mobile-deck-counter {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--red-accent);
+  }
+
+  .mobile-deck-hint {
+    font-size: 0.76rem;
   }
 
   .folio-box {
     position: relative;
-    width: min(380px, 85vw);
-    height: min(440px, 95vw);
+    width: min(390px, 86vw);
+    height: min(450px, 98vw);
     transform-style: preserve-3d;
-    transform: rotateY(-22deg) rotateX(14deg);
+    transform: rotateY(-20deg) rotateX(12deg);
     transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
@@ -233,7 +346,8 @@
     transform-style: preserve-3d;
     will-change: transform, opacity;
     border-radius: 8px;
-    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+    cursor: pointer;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, opacity 0.4s ease;
   }
 
   .plate-inner {
@@ -244,11 +358,16 @@
     border: 1px solid var(--border-subtle);
     border-radius: 8px;
     overflow: hidden;
-    padding: 24px;
+    padding: 26px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08); /* taste-skill-ignore */
+    transition: border-color 0.25s ease, background-color 0.25s ease, transform 0.3s ease;
+  }
+
+  .plate-inner:hover {
+    border-color: var(--border-strong);
   }
 
   .plate-inner-red {
@@ -269,24 +388,25 @@
     width: 100%;
     height: 100%;
     color: var(--ink-primary);
+    pointer-events: none;
   }
 
   .plate-top-bar {
     position: relative;
     z-index: 5;
     display: flex;
-    align-items: baseline;
+    align-items: center;
     gap: 12px;
   }
 
-  .plate-dot {
-    width: 6px;
-    height: 6px;
+  .plate-indicator {
+    width: 7px;
+    height: 7px;
     background-color: var(--ink-tertiary);
     border-radius: 50%;
   }
 
-  .plate-dot.red {
+  .plate-indicator.red {
     background-color: var(--red-accent);
   }
 
@@ -302,13 +422,46 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 20px 0;
+    margin: 16px 0;
+  }
+
+  .blueprint-vector {
+    width: 85%;
+    max-height: 170px;
+    color: var(--ink-secondary);
+    transition: transform 0.4s ease;
+  }
+
+  .folio-plate:hover .blueprint-vector {
+    transform: scale(1.03);
+  }
+
+  .vitruvio-rotating-rings {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    animation: rotateSlow 35s linear infinite;
+    pointer-events: none;
+  }
+
+  @keyframes rotateSlow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
   }
 
   .plate-vitruvio-full {
-    width: 80%;
-    height: 80%;
+    position: relative;
+    z-index: 2;
+    width: 75%;
+    height: 75%;
     object-fit: contain;
+    transition: transform 0.4s ease;
+  }
+
+  .folio-plate:hover .plate-vitruvio-full {
+    transform: scale(1.04);
   }
 
   .plate-footer {
@@ -318,57 +471,59 @@
     letter-spacing: 0.03em;
   }
 
-  /* Minimal wireframes inside layers */
-  .art-sheet {
-    width: 90px;
-    height: 110px;
-    border: 1.5px solid var(--ink-primary);
-    border-radius: 4px;
-    background-color: var(--bg-surface);
-  }
-  .art-sheet.back {
-    position: absolute;
-    transform: rotate(8deg) translate(8px, 6px);
-    z-index: -1;
-    opacity: 0.4;
+  /* Mobile Controls */
+  .mobile-deck-controls {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 24px;
+    width: 100%;
   }
 
-  .art-chair-wireframe {
+  .deck-arrow-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    color: var(--ink-primary);
     display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 6px;
-  }
-  .chair-back {
-    width: 50px;
-    height: 60px;
-    border: 1.5px solid var(--ink-primary);
-    border-radius: 6px 6px 0 0;
-  }
-  .chair-seat {
-    width: 60px;
-    height: 12px;
-    border: 1.5px solid var(--ink-primary);
-    border-radius: 3px;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06); /* taste-skill-ignore */
+    transition: background-color 0.15s ease, transform 0.15s ease;
   }
 
-  .pc-wireframe {
+  .deck-arrow-btn:active {
+    transform: scale(0.92);
+  }
+
+  .deck-pills-list {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 4px;
+    gap: 8px;
   }
-  .screen-frame {
-    width: 100px;
-    height: 65px;
-    border: 1.5px solid var(--ink-primary);
-    border-radius: 4px;
+
+  .deck-pill {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    color: var(--ink-secondary);
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
   }
-  .base-frame {
-    width: 40px;
-    height: 6px;
-    border: 1.5px solid var(--ink-primary);
-    border-radius: 2px;
+
+  .deck-pill.active {
+    background-color: var(--red-accent);
+    border-color: var(--red-accent);
+    color: #ffffff;
+    transform: scale(1.12);
   }
 
   /* Right Narrative Card */
@@ -378,13 +533,6 @@
     border-radius: 8px;
     padding: 44px 38px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04); /* taste-skill-ignore */
-  }
-
-  .card-kicker {
-    font-size: 0.88rem;
-    font-style: italic;
-    margin-bottom: 12px;
-    display: block;
   }
 
   .card-headline {
@@ -469,10 +617,23 @@
     }
     .layers-layout {
       grid-template-columns: 1fr;
-      gap: 40px;
+      gap: 36px;
     }
     .folio-stage {
-      min-height: 420px;
+      min-height: auto;
+      perspective: none;
+    }
+    .mobile-deck-header {
+      display: flex;
+    }
+    .mobile-deck-controls {
+      display: flex;
+    }
+    .folio-box {
+      width: min(340px, 90vw);
+      height: 380px;
+      transform: none !important;
+      perspective: 1000px;
     }
     .narrative-card {
       padding: 32px 24px;
@@ -483,17 +644,12 @@
     .layers-section {
       padding: 70px 0 50px;
     }
-    .folio-stage {
-      min-height: 360px;
-      perspective: 900px;
-    }
     .folio-box {
-      width: min(290px, 82vw);
-      height: min(340px, 94vw);
-      transform: rotateY(-14deg) rotateX(10deg);
+      width: min(310px, 92vw);
+      height: 360px;
     }
     .plate-inner {
-      padding: 18px 16px;
+      padding: 20px 18px;
     }
     .narrative-card {
       padding: 24px 18px;
@@ -506,42 +662,280 @@
 </style>
 
 <script>
-  // Layer Selection Interactions
+  import { gsap } from 'gsap';
+  import { ScrollTrigger } from 'gsap/ScrollTrigger';
+  gsap.registerPlugin(ScrollTrigger);
+
   const buttons = document.querySelectorAll<HTMLButtonElement>('[data-select-layer]');
+  const pills = document.querySelectorAll<HTMLButtonElement>('[data-deck-pill]');
   const plates = document.querySelectorAll<HTMLElement>('.folio-plate');
-  const folioBox = document.getElementById('explodedBox');
+  const stage = document.getElementById('layerStage');
+  const box = document.getElementById('explodedBox');
+  const counter = document.getElementById('deckCounter');
+  const prevBtn = document.getElementById('prevLayerBtn');
+  const nextBtn = document.getElementById('nextLayerBtn');
 
-  function focusLayer(layerNum: number) {
+  let currentLayer = 3; // Centerpiece on Vitruvio by default
+  const totalLayers = 4;
+
+  const isMobile = () => window.innerWidth <= 960;
+
+  // Layer Descriptions & Positions
+  function applyLayerLayout(activeId: number, animated = true) {
+    currentLayer = activeId;
+
+    // Update Buttons
     buttons.forEach(btn => {
-      if (btn.getAttribute('data-select-layer') === String(layerNum)) {
-        btn.classList.add('active');
-      } else {
-        btn.classList.remove('active');
-      }
+      const id = Number(btn.getAttribute('data-select-layer'));
+      const isSelected = id === activeId;
+      btn.classList.toggle('active', isSelected);
+      btn.setAttribute('aria-selected', String(isSelected));
     });
 
-    plates.forEach(plate => {
-      const id = Number(plate.getAttribute('data-layer-id'));
-      if (id === layerNum) {
-        plate.style.transform = `translateZ(${120}px) translateY(-10px) scale(1.04)`;
-        plate.style.zIndex = '30';
-      } else if (id < layerNum) {
-        plate.style.transform = `translateZ(${(id - layerNum) * 70}px) translateY(${(layerNum - id) * 15}px)`;
-        plate.style.zIndex = `${10 + id}`;
-      } else {
-        plate.style.transform = `translateZ(${(id - layerNum) * 50}px) translateY(${(layerNum - id) * 15}px)`;
-        plate.style.zIndex = `${10 + id}`;
-      }
+    // Update Pills
+    pills.forEach(pill => {
+      const id = Number(pill.getAttribute('data-deck-pill'));
+      pill.classList.toggle('active', id === activeId);
     });
+
+    // Update Counter
+    if (counter) {
+      counter.textContent = `Capa ${activeId} de ${totalLayers}`;
+    }
+
+    if (isMobile()) {
+      // MOBILE CARD DECK LAYOUT (Interactive Fanned Poker Deck Physics)
+      plates.forEach(plate => {
+        const id = Number(plate.getAttribute('data-layer-id'));
+        const diff = (id - activeId + totalLayers) % totalLayers;
+
+        let zIndex = 10;
+        let scale = 1;
+        let translateY = 0;
+        let rotate = 0;
+        let opacity = 1;
+
+        if (diff === 0) {
+          // Active Card in front
+          zIndex = 40;
+          scale = 1;
+          translateY = 0;
+          rotate = 0;
+          opacity = 1;
+        } else if (diff === 1) {
+          // Peeking slightly to the right behind
+          zIndex = 30;
+          scale = 0.94;
+          translateY = 12;
+          rotate = 4;
+          opacity = 0.88;
+        } else if (diff === 2) {
+          // Deepest card
+          zIndex = 10;
+          scale = 0.88;
+          translateY = 22;
+          rotate = -1;
+          opacity = 0.6;
+        } else if (diff === 3) {
+          // Peeking slightly to the left behind
+          zIndex = 20;
+          scale = 0.92;
+          translateY = 10;
+          rotate = -5;
+          opacity = 0.8;
+        }
+
+        if (animated) {
+          gsap.to(plate, {
+            zIndex,
+            scale,
+            y: translateY,
+            x: 0,
+            rotation: rotate,
+            opacity,
+            duration: 0.55,
+            ease: 'power3.out',
+          });
+        } else {
+          gsap.set(plate, { zIndex, scale, y: translateY, x: 0, rotation: rotate, opacity });
+        }
+      });
+    } else {
+      // DESKTOP 3D EXPLODED FOLIO LAYOUT
+      plates.forEach(plate => {
+        const id = Number(plate.getAttribute('data-layer-id'));
+        let zIndex = 10;
+        let x = 0;
+        let y = 0;
+        let z = 0;
+        let scale = 1;
+        let opacity = 1;
+
+        if (id === activeId) {
+          // Focused plate brought to the camera with depth
+          zIndex = 50;
+          scale = 1.05;
+          z = 140;
+          y = -12;
+          x = 0;
+          opacity = 1;
+        } else {
+          // Spread in 3D exploded isometric coordinates
+          if (id === 1) {
+            x = -45;
+            y = -40;
+            z = -80;
+            zIndex = 15;
+            opacity = 0.85;
+          } else if (id === 2) {
+            x = 40;
+            y = -25;
+            z = -20;
+            zIndex = 25;
+            opacity = 0.9;
+          } else if (id === 3) {
+            x = 0;
+            y = 10;
+            z = 60;
+            zIndex = 35;
+            opacity = 0.95;
+          } else if (id === 4) {
+            x = 35;
+            y = 55;
+            z = 110;
+            zIndex = 40;
+            opacity = 0.9;
+          }
+        }
+
+        if (animated) {
+          gsap.to(plate, {
+            zIndex,
+            scale,
+            x,
+            y,
+            z,
+            opacity,
+            duration: 0.7,
+            ease: 'power2.out',
+          });
+        } else {
+          gsap.set(plate, { zIndex, scale, x, y, z, opacity });
+        }
+      });
+    }
   }
 
+  // Button selectors
   buttons.forEach(btn => {
     btn.addEventListener('click', () => {
-      const layerNum = Number(btn.getAttribute('data-select-layer'));
-      focusLayer(layerNum);
+      const id = Number(btn.getAttribute('data-select-layer'));
+      applyLayerLayout(id, true);
     });
   });
 
-  // Default initial depth layout
-  focusLayer(3); // Centerpiece on Vitruvio by default
+  // Mobile pills
+  pills.forEach(pill => {
+    pill.addEventListener('click', () => {
+      const id = Number(pill.getAttribute('data-deck-pill'));
+      applyLayerLayout(id, true);
+    });
+  });
+
+  // Click on plates directly
+  plates.forEach(plate => {
+    plate.addEventListener('click', () => {
+      const id = Number(plate.getAttribute('data-layer-id'));
+      applyLayerLayout(id, true);
+    });
+  });
+
+  // Arrow controls
+  prevBtn?.addEventListener('click', () => {
+    let next = currentLayer - 1;
+    if (next < 1) next = totalLayers;
+    applyLayerLayout(next, true);
+  });
+
+  nextBtn?.addEventListener('click', () => {
+    let next = currentLayer + 1;
+    if (next > totalLayers) next = 1;
+    applyLayerLayout(next, true);
+  });
+
+  // TOUCH SWIPE GESTURES FOR MOBILE
+  let touchStartX = 0;
+  let touchStartY = 0;
+
+  box?.addEventListener('touchstart', (e: TouchEvent) => {
+    touchStartX = e.touches[0].clientX;
+    touchStartY = e.touches[0].clientY;
+  }, { passive: true });
+
+  box?.addEventListener('touchend', (e: TouchEvent) => {
+    const touchEndX = e.changedTouches[0].clientX;
+    const touchEndY = e.changedTouches[0].clientY;
+    const diffX = touchEndX - touchStartX;
+    const diffY = touchEndY - touchStartY;
+
+    // Trigger swipe if horizontal movement is > 40px and dominant over vertical
+    if (Math.abs(diffX) > 40 && Math.abs(diffX) > Math.abs(diffY)) {
+      if (diffX < 0) {
+        // Swipe Left -> Next
+        let next = currentLayer + 1;
+        if (next > totalLayers) next = 1;
+        applyLayerLayout(next, true);
+      } else {
+        // Swipe Right -> Prev
+        let next = currentLayer - 1;
+        if (next < 1) next = totalLayers;
+        applyLayerLayout(next, true);
+      }
+    }
+  }, { passive: true });
+
+  // Desktop Mouse Tilt Parallax
+  if (stage && box) {
+    stage.addEventListener('mousemove', (e) => {
+      if (isMobile()) return;
+      const rect = stage.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      
+      gsap.to(box, {
+        rotationY: -20 + x * 16,
+        rotationX: 12 - y * 14,
+        duration: 0.5,
+        ease: 'power1.out',
+      });
+    });
+
+    stage.addEventListener('mouseleave', () => {
+      if (isMobile()) return;
+      gsap.to(box, {
+        rotationY: -20,
+        rotationX: 12,
+        duration: 0.8,
+        ease: 'power2.out',
+      });
+    });
+  }
+
+  // Scroll Entrance Fan-out Animation (Desktop & Mobile)
+  ScrollTrigger.create({
+    trigger: '#capas',
+    start: 'top 75%',
+    once: true,
+    onEnter: () => {
+      applyLayerLayout(3, true);
+    }
+  });
+
+  // Handle Window Resize
+  window.addEventListener('resize', () => {
+    applyLayerLayout(currentLayer, false);
+  });
+
+  // Initial layout
+  applyLayerLayout(3, false);
 </script>

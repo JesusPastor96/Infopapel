@@ -109,61 +109,7 @@ import Footer from '../components/Footer.astro';
           ease: 'power2.out'
         }, '-=0.5');
 
-      // 5. LAYER DECONSTRUCTION: 3D Exploded View on Scroll
-      const layerTimeline = gsap.timeline({
-        scrollTrigger: {
-          trigger: '#capas',
-          start: 'top 70%',
-          end: 'bottom 45%',
-          scrub: 1.2,
-        }
-      });
 
-      layerTimeline
-        .to('.plate-1', {
-          transform: 'translateZ(-90px) translateX(-25px) translateY(18px)',
-          ease: 'none',
-        }, 0)
-        .to('.plate-2', {
-          transform: 'translateZ(-20px) translateX(-8px) translateY(6px)',
-          ease: 'none',
-        }, 0)
-        .to('.plate-3', {
-          transform: 'translateZ(60px) translateX(12px) translateY(-10px)',
-          ease: 'none',
-        }, 0)
-        .to('.plate-4', {
-          transform: 'translateZ(140px) translateX(28px) translateY(-22px)',
-          ease: 'none',
-        }, 0);
-
-      // Interactive mouse tilt on the 3D folio box
-      const stage = document.getElementById('layerStage');
-      const box = document.getElementById('explodedBox');
-
-      if (stage && box) {
-        stage.addEventListener('mousemove', (e) => {
-          const rect = stage.getBoundingClientRect();
-          const x = (e.clientX - rect.left) / rect.width - 0.5;
-          const y = (e.clientY - rect.top) / rect.height - 0.5;
-          
-          gsap.to(box, {
-            rotationY: -22 + x * 16,
-            rotationX: 14 - y * 14,
-            duration: 0.5,
-            ease: 'power1.out',
-          });
-        });
-
-        stage.addEventListener('mouseleave', () => {
-          gsap.to(box, {
-            rotationY: -22,
-            rotationX: 14,
-            duration: 0.8,
-            ease: 'power2.out',
-          });
-        });
-      }
 
       // 6. Staggered reveal for Story and Services
       gsap.from('[data-story-col]', {
